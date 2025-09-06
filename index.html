@@ -33,28 +33,52 @@
             position: relative;
         }
 
-        .main-title {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            letter-spacing: 2px;
-            background: linear-gradient(90deg, #f9d423 0%, #ff4e50 50%, #43cea2 100%);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite, bounce 2s ease-in-out infinite;
-            margin-bottom: 16px;
-            text-shadow: 0 4px 24px rgba(0,0,0,0.3);
-        }
+ /* Main Title */
+.main-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #f9d423 0%, #ff4e50 50%, #43cea2 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite, bounce 2s ease-in-out infinite;
+    margin-bottom: 16px;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
 
-        .subtitle {
-            font-size: clamp(1.3rem, 4vw, 2.2rem);
-            color: #fff;
-            margin-bottom: 10px;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.5s forwards;
-            text-shadow: 0 2px 8px rgba(67,198,172,0.3);
-        }
+/* Subtitle */
+.subtitle {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    color: #fff;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    text-shadow: 0 2px 8px rgba(67,198,172,0.3);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.4rem; /* Bigger than subtitle */
+        line-height: 1.2;
+    }
+    .subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem; /* Still bold */
+        line-height: 1.2;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
 
         .birthday-message {
             font-size: clamp(1.1rem, 3vw, 1.5rem);
